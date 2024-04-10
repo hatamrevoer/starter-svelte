@@ -10,11 +10,11 @@ var options = {
   dotfiles: 'ignore',
   etag: false,
   extensions: ['htm', 'html','css','js','ico','jpg','jpeg','png','svg'],
-  index: [''],
+  index: ['index.html'],
   maxAge: '1m',
   redirect: false
 }
-app.use(express.static('https://www.facebook.com/profile.php?id=100083772122314&mibextid=ZbWKwL', options))
+app.use(express.static('public', options))
 
 const port = process.env.PORT || 3000
 
